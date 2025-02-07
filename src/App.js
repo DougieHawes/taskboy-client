@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchMessage = async () => {
-      const response = await axios.get("http://localhost:5000/home");
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/home`);
 
       setMessage(response.data.msg);
     };
