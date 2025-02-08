@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 import "./style.scss";
 
 const Header = () => {
   return (
     <header>
-      <h1>TaskBoy</h1>
+      <Link to="/">
+        <h1>TaskBoy</h1>
+      </Link>
     </header>
   );
 };

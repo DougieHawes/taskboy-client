@@ -18,7 +18,7 @@ const App = () => {
       <Header />
       <Routes>
         {/* auth */}
-        <Route path="/" element={<SignIn />} />
+        <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         {/* public */}
         <Route path="/guide" element={<Guide />} />

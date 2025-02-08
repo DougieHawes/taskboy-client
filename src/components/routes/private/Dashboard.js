@@ -1,7 +1,9 @@
+import { Route3 } from "../../utils/routes";
+
 import "./style.scss";
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return <Route3 content={<></>} title="DASHBOARD" />;
 };
 
 export default Dashboard;
