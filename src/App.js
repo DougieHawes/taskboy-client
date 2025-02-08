@@ -1,23 +1,32 @@
-import axios from "axios";
+import { Routes, Route } from "react-router-dom";
 
-import { useState, useEffect } from "react";
+// layout
+import Header from "./components/layout/Header";
+// auth routes
+import SignIn from "./components/routes/auth/SignIn";
+import SignUp from "./components/routes/auth/SignUp";
+// public routes
+import Guide from "./components/routes/public/Guide";
+// private
+import Dashboard from "./components/routes/private/Dashboard";
 
-import "./style.scss";
+import "./display/styles/style.scss";
 
 const App = () => {
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    const fetchMessage = async () => {
-      const response = await axios.get(`${process.env.REACT_APP_API_URL}/home`);
-
-      setMessage(response.data.msg);
-    };
-
-    fetchMessage();
-  }, []);
-
-  return <div>{message}</div>;
+  return (
+    <div className="app">
+      <Header />
+      <Routes>
+        {/* auth */}
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        {/* public */}
+        <Route path="/guide" element={<Guide />} />
+        {/* private */}
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;
