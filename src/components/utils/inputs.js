@@ -1,3 +1,5 @@
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 import "./style.scss";
 
 export const Input1 = ({
@@ -20,7 +22,7 @@ export const Input1 = ({
     />
     {password && (
       <div className="input-password-toggle" onClick={onClick}>
-        P
+        {passwordOn ? <FaEye size={28} /> : <FaEyeSlash size={28} />}
       </div>
     )}
   </div>

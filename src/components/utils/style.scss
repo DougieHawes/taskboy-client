@@ -1,1 +1,69 @@
 @import "../../display/styles/variables";
+
+// buttons
+.button {
+  background-color: rgba($color: $colour2, $alpha: 0.7);
+  border: 2px solid $colour1;
+  cursor: pointer;
+  font-family: $font2;
+  font-size: $form-text-size;
+  width: 100%;
+}
+
+// inputs
+.input-container {
+  .input {
+    background-color: rgba($color: $colour2, $alpha: 0.7);
+    border-bottom: 2px solid $colour1;
+    border-left: 2px solid $colour2;
+    border-right: 2px solid $colour1;
+    border-top: 2px solid $colour2;
+    font-size: $form-text-size;
+    height: 35px;
+    margin-bottom: 14px;
+    padding: 0 1%;
+    width: 100%;
+  }
+}
+.input1-container {
+  display: flex;
+  .input1 {
+  }
+  .input-password-toggle {
+    cursor: pointer;
+    padding-left: 7px;
+  }
+}
+
+// link
+.link {
+  .link-text {
+  }
+}
+.link1 {
+  font-size: 21px;
+  .link1-text {
+    text-decoration: underline;
+  }
+}
+
+// routes
+.route {
+  .route-title {
+    font-size: 42px;
+  }
+  .route-content {
+  }
+}
+.route1 {
+  .route-title {
+    text-align: center;
+  }
+  .route-content {
+    .route-form {
+      margin: 21px auto;
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+}

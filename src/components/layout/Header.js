@@ -4,9 +4,9 @@ import "./style.scss";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       <Link to="/">
-        <h1>TaskBoy</h1>
+        <h1 className="header-title">TaskBoy</h1>
       </Link>
     </header>
   );

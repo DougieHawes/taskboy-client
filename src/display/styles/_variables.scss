@@ -2,5 +2,16 @@
   font-family: "vt323";
   src: url("../fonts/VT323.ttf");
 }
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.ttf");
+}
 
+$font1: "roboto";
 $font2: "vt323";
+
+$colour1: #00ff00;
+$colour2: #333333;
+$colour3: #c0c0c0;
+
+$form-text-size: 28px;

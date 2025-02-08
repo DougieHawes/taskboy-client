@@ -1,1 +1,10 @@
 @import "../../display/styles/variables";
+
+.header {
+  border-bottom: 2px solid $colour1;
+  .header-title {
+    font-size: 60px;
+    letter-spacing: -3px;
+    margin-bottom: -10px;
+  }
+}

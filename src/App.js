@@ -15,16 +15,18 @@ import "./display/styles/style.scss";
 const App = () => {
   return (
     <div className="app">
-      <Header />
-      <Routes>
-        {/* auth */}
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-        {/* public */}
-        <Route path="/guide" element={<Guide />} />
-        {/* private */}
-        <Route path="/dashboard" element={<Dashboard />} />
-      </Routes>
+      <div className="screen">
+        <Header />
+        <Routes>
+          {/* auth */}
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          {/* public */}
+          <Route path="/guide" element={<Guide />} />
+          {/* private */}
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
     </div>
   );
 };
