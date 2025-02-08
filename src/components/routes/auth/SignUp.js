@@ -4,11 +4,10 @@ import { Route1 } from "../../utils/routes";
 
 import { Button1 } from "../../utils/buttons";
 import { Input1 } from "../../utils/inputs";
-import { Link1 } from "../../utils/links";
 
 import "./style.scss";
 
-const SignUp = () => {
+const SignUp = ({ onClick }) => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -62,7 +61,12 @@ const SignUp = () => {
             value={confirmPassword}
           />
           <Button1 onClick={handleSubmit} text="SUBMIT" />
-          <Link1 text="already signed up? click " to="/signin" />
+          <div className="auth-toggle">
+            already signed up? click{" "}
+            <div className="auth-toggle-text" onClick={onClick}>
+              HERE
+            </div>
+          </div>
         </>
       }
       title="SIGN-UP"

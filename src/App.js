@@ -1,10 +1,9 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 // layout
 import Header from "./components/layout/Header";
 // auth routes
-import SignIn from "./components/routes/auth/SignIn";
-import SignUp from "./components/routes/auth/SignUp";
+import Auth from "./components/routes/auth/Auth";
 // public routes
 import Guide from "./components/routes/public/Guide";
 // private
@@ -17,10 +16,10 @@ const App = () => {
     <div className="app">
       <div className="screen">
         <Header />
+        <Link to="/auth">DUMMY-LINK</Link>
         <Routes>
           {/* auth */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/auth" element={<Auth />} />
           {/* public */}
           <Route path="/guide" element={<Guide />} />
           {/* private */}

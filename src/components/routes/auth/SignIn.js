@@ -8,7 +8,7 @@ import { Link1 } from "../../utils/links";
 
 import "./style.scss";
 
-const SignUp = () => {
+const SignUp = ({ onClick }) => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -45,7 +45,12 @@ const SignUp = () => {
             value={password}
           />
           <Button1 onClick={handleSubmit} text="SUBMIT" />
-          <Link1 text="not yet signed up? click " to="/signup" />
+          <div className="auth-toggle">
+            not yet signed up? click{" "}
+            <div className="auth-toggle-text" onClick={onClick}>
+              HERE
+            </div>
+          </div>
         </>
       }
       title="SIGN-IN"

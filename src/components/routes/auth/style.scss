@@ -1,1 +1,14 @@
 @import "../../../display/styles/variables";
+
+.auth-toggle {
+  display: flex;
+  bottom: 0;
+  font-size: 21px;
+  position: absolute;
+  right: 0;
+  .auth-toggle-text {
+    cursor: pointer;
+    margin-left: 7px;
+    text-decoration: underline;
+  }
+}
