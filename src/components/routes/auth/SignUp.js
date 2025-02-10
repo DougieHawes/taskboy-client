@@ -14,10 +14,10 @@ const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
 
 const SignUp = ({ onClick }) => {
   const [formData, setFormData] = useState({
-    username: "DougieHawes",
-    email: "dougiehawes@hotmail.com",
-    password: "Wittgenstein42",
-    confirmPassword: "Wittgenstein42",
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
   const [passwordOn, setPasswordOn] = useState(true);
 
