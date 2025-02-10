@@ -32,6 +32,14 @@ const SignUp = ({ onClick }) => {
     e.preventDefault();
 
     try {
+      const response = await axios.post(
+        `${REACT_APP_API_URL}/user/signup`,
+        formData
+      );
+
+      console.log(response.data);
+
+      navigate("/private/dashboard");
     } catch (error) {
       console.log(error.message);
     }
