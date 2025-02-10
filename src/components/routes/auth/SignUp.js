@@ -1,4 +1,7 @@
+import axios from "axios";
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Route1 } from "../../utils/routes";
 
@@ -7,22 +10,31 @@ import { Input1 } from "../../utils/inputs";
 
 import "./style.scss";
 
+const REACT_APP_API_URL = process.env.REACT_APP_API_URL;
+
 const SignUp = ({ onClick }) => {
   const [formData, setFormData] = useState({
-    username: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
+    username: "DougieHawes",
+    email: "dougiehawes@hotmail.com",
+    password: "Wittgenstein42",
+    confirmPassword: "Wittgenstein42",
   });
   const [passwordOn, setPasswordOn] = useState(true);
 
   const { username, email, password, confirmPassword } = formData;
 
+  const navigate = useNavigate();
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (

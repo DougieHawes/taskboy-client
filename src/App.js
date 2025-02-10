@@ -23,7 +23,7 @@ const App = () => {
           {/* public */}
           <Route path="/guide" element={<Guide />} />
           {/* private */}
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/private/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </div>
